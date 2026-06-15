@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>박진혁 · Backend Engineer</title>
+<meta name="description" content="AI와 일하는 백엔드 엔지니어 — 박진혁 이력서" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+  :root {
+    --ink: #16181d;
+    --muted: #6b7280;
+    --faint: #9aa1ab;
+    --line: #e7e9ed;
+    --bg: #fcfcfd;
+    --accent: #2f4bd8;
+    --accent-soft: #eef1fe;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "tnum";
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 88px 32px 120px;
+  }
+
+  /* ---- header ---- */
+  header { margin-bottom: 56px; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    margin-bottom: 18px;
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--accent-soft);
+    border-radius: 4px;
+  }
+
+  h1 {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  .role {
+    font-size: 17px;
+    color: var(--muted);
+    margin-top: 12px;
+    font-weight: 500;
+  }
+
+  .summary {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #3a3e46;
+    max-width: 60ch;
+  }
+
+  .contact {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .contact a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1px;
+    transition: border-color .15s, color .15s;
+  }
+  .contact a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ---- sections ---- */
+  section { margin-bottom: 48px; }
+
+  .sec-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* experience row: date rail + body */
+  .item {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 24px;
+    margin-bottom: 34px;
+  }
+  .item:last-child { margin-bottom: 0; }
+
+  .item .when {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--faint);
+    padding-top: 3px;
+  }
+
+  .item h3 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .item .org {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 2px;
+    margin-bottom: 12px;
+  }
+
+  ul { list-style: none; }
+  li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 7px;
+    font-size: 15px;
+    color: #34383f;
+  }
+  li::before {
+    content: "";
+    position: absolute;
+    left: 2px; top: 11px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--line);
+  }
+  li b {
+    color: var(--ink);
+    font-weight: 700;
+    background: linear-gradient(transparent 62%, var(--accent-soft) 62%);
+    padding: 0 1px;
+  }
+
+  /* skills */
+  .skills {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 24px 24px;
+    align-items: baseline;
+  }
+  .skills .cat {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--faint);
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag {
+    font-size: 13px;
+    padding: 3px 11px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    color: #34383f;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--faint);
+  }
+
+  /* responsive */
+  @media (max-width: 560px) {
+    .wrap { padding: 56px 22px 80px; }
+    h1 { font-size: 34px; }
+    .item, .skills { grid-template-columns: 1fr; gap: 6px; }
+    .item .when { padding-top: 0; }
+  }
+
+  /* print / PDF */
+  @media print {
+    body { background: #fff; }
+    .wrap { padding: 24px 0; max-width: 100%; }
+    .contact a { border: none; }
+    li b { background: none; }
+    a { color: var(--ink) !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- =============== EDIT: 연락처/이름 =============== -->
+    <header>
+      <span class="eyebrow">AI와 일하는 백엔드 엔지니어</span>
+      <h1>박진혁</h1>
+      <p class="role">Java · Spring Backend Engineer / 유진ITS 정보전략2팀</p>
+      <p class="summary">
+        엔터프라이즈 HR ERP를 6년간 설계·운영해 온 백엔드 개발자입니다.
+        최근에는 사내 AI 플랫폼(EugeneGPT·WorksAI)의 운영과 그룹사 확산을 맡아
+        RAG·LangGraph·MCP 기반 시스템을 직접 만들고 있습니다.
+      </p>
+      <div class="contact">
+        <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <a href="https://github.com/yourname">github.com/yourname</a>
+        <a href="https://yourname.github.io">yourname.github.io</a>
+      </div>
+    </header>
+
+    <!-- =============== 경력 =============== -->
+    <section>
+      <div class="sec-label">Experience</div>
+
+      <div class="item">
+        <div class="when">2021 — 현재</div>
+        <div>
+          <h3>대리 · 백엔드 개발 / AI 내재화</h3>
+          <div class="org">유진ITS · 정보전략2팀</div>
+          <ul>
+            <li>Oracle/JEUS 기반 e-HR 시스템 개발·운영, 핵심 HR 조회 응답시간 <b>18초 → 1초</b> 단축</li>
+            <li>반복 HR 데이터 입력 작업 <b>85% 자동화</b>, 결재 병렬처리 구조 개선</li>
+            <li>사내 AI 플랫폼 EugeneGPT(WorksAI) 운영 및 그룹사 확산 주도</li>
+            <li>RAG 파이프라인 · LangGraph 멀티에이전트 · AWS Lambda 기반 MCP 서버 구축</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">YYYY — YYYY</div>
+        <div>
+          <h3>백엔드 개발</h3>
+          <div class="org">포비즈코리아</div>
+          <ul>
+            <li>이커머스 플랫폼 개발 및 운영</li>
+            <li>스마일게이트샵 <b>4개국 글로벌 PL</b> 담당, 다국가 서비스 대응</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== 기술 =============== -->
+    <section>
+      <div class="sec-label">Skills</div>
+      <div class="skills">
+        <div class="cat">Backend</div>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Spring</span>
+          <span class="tag">Oracle</span>
+          <span class="tag">JEUS</span>
+        </div>
+        <div class="cat">AI / LLM</div>
+        <div class="tags">
+          <span class="tag">LangChain</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">RAG</span>
+          <span class="tag">MCP</span>
+        </div>
+        <div class="cat">Infra</div>
+        <div class="tags">
+          <span class="tag">AWS Lambda</span>
+          <span class="tag">API Gateway</span>
+          <span class="tag">Cognito</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== 프로젝트 =============== -->
+    <section>
+      <div class="sec-label">Projects</div>
+
+      <div class="item">
+        <div class="when">2026</div>
+        <div>
+          <h3>SC-TSQL · 자기교정 Text-to-SQL 에이전트</h3>
+          <div class="org">국민대 대학원 / KITS 2026 춘계학술대회 발표</div>
+          <ul>
+            <li>오류 유형 인식 기반 자기교정 파이프라인으로 BIRD 벤치마크 정확도 향상</li>
+            <li>Schema RAG → NL2SQL → Validator → Error Classifier → Executor 5단계 구조</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">2025 —</div>
+        <div>
+          <h3>사내 시스템 연동 MCP 서버</h3>
+          <div class="org">유진ITS</div>
+          <ul>
+            <li>OAuth 2.0/JWT 기반으로 WorksAI와 사내 HR Oracle 시스템 안전 연동</li>
+            <li>API Gateway · NAT Gateway/DMZ 릴레이로 폐쇄망 연동 아키텍처 설계</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== 학력 =============== -->
+    <section>
+      <div class="sec-label">Education</div>
+      <div class="item">
+        <div class="when">— 2026</div>
+        <div>
+          <h3>소프트웨어융합대학원 · AI 전공</h3>
+          <div class="org">국민대학교 · 2026 졸업예정</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>박진혁 · Last updated 2026</footer>
+
+  </div>
+</body>
+</html>

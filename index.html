@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>박진혁 · Backend Engineer</title>
-<meta name="description" content="AI와 일하는 백엔드 엔지니어 — 박진혁 이력서" />
+<title>박진혁 · Server Developer</title>
+<meta name="description" content="Java·Spring 기반 6년 차 서버 백엔드 개발자 — 박진혁 경력기술서" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <style>
   :root {
@@ -68,8 +68,9 @@
     margin-top: 20px;
     font-size: 16px;
     color: #3a3e46;
-    max-width: 60ch;
+    max-width: 62ch;
   }
+  .summary + .summary { margin-top: 12px; }
 
   .contact {
     margin-top: 24px;
@@ -79,9 +80,11 @@
     font-family: var(--mono);
     font-size: 13px;
   }
-  .contact a {
+  .contact a, .contact span {
     color: var(--ink);
     text-decoration: none;
+  }
+  .contact a {
     border-bottom: 1px solid var(--line);
     padding-bottom: 1px;
     transition: border-color .15s, color .15s;
@@ -102,12 +105,39 @@
     border-bottom: 1px solid var(--line);
   }
 
+  /* company group */
+  .company {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .company:not(:first-of-type) { margin-top: 42px; }
+  .company h2 {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .company .meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+  .company .when {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--faint);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
   /* experience row: date rail + body */
   .item {
     display: grid;
     grid-template-columns: 132px 1fr;
     gap: 24px;
-    margin-bottom: 34px;
+    margin-bottom: 30px;
   }
   .item:last-child { margin-bottom: 0; }
 
@@ -119,13 +149,20 @@
   }
 
   .item h3 {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: -0.01em;
   }
   .item .org {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--muted);
+    margin-top: 3px;
+    margin-bottom: 12px;
+  }
+  .item .stack {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--faint);
     margin-top: 2px;
     margin-bottom: 12px;
   }
@@ -189,6 +226,7 @@
     h1 { font-size: 34px; }
     .item, .skills { grid-template-columns: 1fr; gap: 6px; }
     .item .when { padding-top: 0; }
+    .company { flex-direction: column; gap: 4px; }
   }
 
   /* print / PDF */
@@ -204,55 +242,30 @@
 <body>
   <div class="wrap">
 
-    <!-- =============== EDIT: 연락처/이름 =============== -->
+    <!-- =============== 헤더 =============== -->
     <header>
-      <span class="eyebrow">AI와 일하는 백엔드 엔지니어</span>
+      <span class="eyebrow">Java · Spring Server Developer</span>
       <h1>박진혁</h1>
-      <p class="role">Java · Spring Backend Engineer / 유진ITS 정보전략2팀</p>
+      <p class="role">6년 차 서버 백엔드 개발자 · 유진아이티서비스</p>
       <p class="summary">
-        엔터프라이즈 HR ERP를 6년간 설계·운영해 온 백엔드 개발자입니다.
-        최근에는 사내 AI 플랫폼(EugeneGPT·WorksAI)의 운영과 그룹사 확산을 맡아
-        RAG·LangGraph·MCP 기반 시스템을 직접 만들고 있습니다.
+        Java·Spring, Oracle/MySQL 기반 6년 차 서버 백엔드 개발자입니다.
+        일 1,000건+·월 5만 건+ 주문을 처리하는 커머스 플랫폼, 다국가 통화·결제를 다룬
+        글로벌 커머스, 약 500명 규모 그룹사 인사 시스템에서 백엔드 개발과 운영을 맡아왔습니다.
+      </p>
+      <p class="summary">
+        주문·결제·환불·정산 트랜잭션의 정합성과 대용량 조회 성능을 끝까지 파고드는 영역으로 보고,
+        화면 응답을 <b>18초→1초</b>, 상품 조회를 <b>10초→1초</b>로 줄이고
+        30만 건 규모 데이터 마이그레이션의 무결성을 검증했습니다.
+        현재는 사내 시스템과 AI를 잇는 연동 표준 설계와 인사 시스템 운영을 전담하고 있습니다.
       </p>
       <div class="contact">
-        <a href="mailto:your.email@example.com">your.email@example.com</a>
-        <a href="https://github.com/yourname">github.com/yourname</a>
-        <a href="https://yourname.github.io">yourname.github.io</a>
+        <a href="mailto:wlsgurlek@gmail.com">wlsgurlek@gmail.com</a>
+        <span>010-6717-7033</span>
+        <a href="https://jh-p.tistory.com">jh-p.tistory.com</a>
       </div>
     </header>
 
-    <!-- =============== 경력 =============== -->
-    <section>
-      <div class="sec-label">Experience</div>
-
-      <div class="item">
-        <div class="when">2021 — 현재</div>
-        <div>
-          <h3>대리 · 백엔드 개발 / AI 내재화</h3>
-          <div class="org">유진ITS · 정보전략2팀</div>
-          <ul>
-            <li>Oracle/JEUS 기반 e-HR 시스템 개발·운영, 핵심 HR 조회 응답시간 <b>18초 → 1초</b> 단축</li>
-            <li>반복 HR 데이터 입력 작업 <b>85% 자동화</b>, 결재 병렬처리 구조 개선</li>
-            <li>사내 AI 플랫폼 EugeneGPT(WorksAI) 운영 및 그룹사 확산 주도</li>
-            <li>RAG 파이프라인 · LangGraph 멀티에이전트 · AWS Lambda 기반 MCP 서버 구축</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="when">YYYY — YYYY</div>
-        <div>
-          <h3>백엔드 개발</h3>
-          <div class="org">포비즈코리아</div>
-          <ul>
-            <li>이커머스 플랫폼 개발 및 운영</li>
-            <li>스마일게이트샵 <b>4개국 글로벌 PL</b> 담당, 다국가 서비스 대응</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- =============== 기술 =============== -->
+    <!-- =============== 보유 기술 =============== -->
     <section>
       <div class="sec-label">Skills</div>
       <div class="skills">
@@ -260,67 +273,164 @@
         <div class="tags">
           <span class="tag">Java</span>
           <span class="tag">Spring</span>
-          <span class="tag">Oracle</span>
-          <span class="tag">JEUS</span>
+          <span class="tag">JSP</span>
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">PHP</span>
+          <span class="tag">CodeIgniter</span>
         </div>
-        <div class="cat">AI / LLM</div>
+        <div class="cat">Database</div>
+        <div class="tags">
+          <span class="tag">Oracle</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Elasticsearch</span>
+        </div>
+        <div class="cat">AI · ML</div>
         <div class="tags">
           <span class="tag">LangChain</span>
           <span class="tag">LangGraph</span>
-          <span class="tag">RAG</span>
           <span class="tag">MCP</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">pandas</span>
+          <span class="tag">FAISS</span>
         </div>
-        <div class="cat">Infra</div>
+        <div class="cat">DevOps · Infra</div>
         <div class="tags">
-          <span class="tag">AWS Lambda</span>
-          <span class="tag">API Gateway</span>
-          <span class="tag">Cognito</span>
+          <span class="tag">AWS</span>
+          <span class="tag">JEUS</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">Git</span>
+          <span class="tag">SVN</span>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="cat">Collaboration</div>
+        <div class="tags">
+          <span class="tag">JIRA</span>
+          <span class="tag">Confluence</span>
+          <span class="tag">BitBucket</span>
         </div>
       </div>
     </section>
 
-    <!-- =============== 프로젝트 =============== -->
+    <!-- =============== 상세 경력 =============== -->
     <section>
-      <div class="sec-label">Projects</div>
+      <div class="sec-label">Experience</div>
+
+      <!-- ---- 유진아이티서비스 ---- -->
+      <div class="company">
+        <div>
+          <h2>유진아이티서비스</h2>
+          <div class="meta">그룹 IT 인프라·서비스 전문 기업 · Server Developer</div>
+        </div>
+        <div class="when">2023.06 — 재직 중</div>
+      </div>
 
       <div class="item">
-        <div class="when">2026</div>
+        <div class="when">2023.06 — 진행 중</div>
         <div>
-          <h3>SC-TSQL · 자기교정 Text-to-SQL 에이전트</h3>
-          <div class="org">국민대 대학원 / KITS 2026 춘계학술대회 발표</div>
+          <h3>e-HR 인사시스템 성능 고도화 및 운영 안정성 개선</h3>
+          <div class="org">그룹 계열사 인사 시스템(약 500명 규모) 단독 운영·유지보수 / SSO 통합 로그인 PL</div>
+          <div class="stack">Java · Spring · JSP · Oracle · JavaScript · jQuery · Linux · Jenkins · JEUS · SVN · Git</div>
           <ul>
-            <li>오류 유형 인식 기반 자기교정 파이프라인으로 BIRD 벤치마크 정확도 향상</li>
-            <li>Schema RAG → NL2SQL → Validator → Error Classifier → Executor 5단계 구조</li>
+            <li>핵심 화면 응답 지연 <b>18초→1초(94%↓)</b> — 인덱스 보완·동적 SQL의 정적 SQL 전환으로 Oracle 하드파싱 비용 절감, 반복 조회·마스킹은 서버 캐시로, 접속 로그는 비동기로 분리</li>
+            <li>일괄 결재 로직을 <b>비동기 병렬 처리</b>로 전환, 사용자 체감 응답 1초 이내로 단축</li>
+            <li>SSO 통합 로그인 기능을 <b>프로젝트 리더</b>로 맡아 분석·설계·개발·검증 전 구간 주도</li>
+            <li>신규 입사자 등록을 엑셀 업로드·유효성 검증·DB 자동 반영 구조로 전환 <b>(20분→1분, 95%↓)</b></li>
+            <li>개인정보 마스킹을 공통 AOP·인터셉터로 일원화, 접근 로그·감사 추적으로 개인정보 법령 요건 충족</li>
+            <li>FTP 수동 배포를 <b>Jenkins·Git 자동 배포 파이프라인</b>으로 전환, 누락·오배포 리스크 제거</li>
+            <li>Oracle DB 성능 최적화·쿼리 튜닝 상시 수행, 조직도·인력 현황 시각화 및 리포팅 기능 개발</li>
           </ul>
         </div>
       </div>
 
       <div class="item">
-        <div class="when">2025 —</div>
+        <div class="when">2025.07 — 진행 중</div>
         <div>
-          <h3>사내 시스템 연동 MCP 서버</h3>
-          <div class="org">유진ITS</div>
+          <h3>그룹 전사 AI 서비스 도입·운영 및 사내 시스템 연동</h3>
+          <div class="org">SaaS 기반 AI 서비스 ‘웍스AI’ 연동·그룹사 확산 전 과정 · Project Leader</div>
+          <div class="stack">Python · LangGraph · MCP · Linux · AWS · Git</div>
           <ul>
-            <li>OAuth 2.0/JWT 기반으로 WorksAI와 사내 HR Oracle 시스템 안전 연동</li>
-            <li>API Gateway · NAT Gateway/DMZ 릴레이로 폐쇄망 연동 아키텍처 설계</li>
+            <li>외부 SaaS–사내 시스템 데이터 연동 인터페이스 설계·구현, <b>OAuth 2.0/JWT 기반 표준 인증·인가 체계</b>(토큰 만료·갱신, scope 정의)를 사내 환경에 정착</li>
+            <li>외부 차단 내부망을 <b>API Gateway → Lambda → NAT Gateway → 사내 DMZ</b> 경로로 설계하고, MCP 서버를 두어 보안 경계를 지키며 AI가 e-HR 데이터를 안전하게 활용하도록 연동</li>
+            <li>투자심의위원회를 대체하는 <b>AI Agent</b> 구현 — LangGraph 상태 그래프로 다수 에이전트에 역할 주입·단계별 심의 절차 통제, MCP 서버를 데이터 근거 판단 수단으로 활용</li>
+            <li>사내 데이터 조회용 REST API 신규 개발·운영, 월별 사용자·호출량 집계 및 정기 보고 체계 구축</li>
+            <li>그룹 계열사 대상 오프라인 교육 5회 진행·팀장급 도입 효과 발표·확산 PoC 기술 리딩</li>
+            <li>결과 — 그룹 내 <b>활성 사용자 900명·15개 계열사</b>로 확산, AI–사내 시스템 연동 표준 인증·인가 흐름 정착</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">2025.01 — 2025.12</div>
+        <div>
+          <h3>사내 AI 플랫폼 내재화</h3>
+          <div class="org">사내 문서 기반 답변·보고서 초안 생성 AI 플랫폼 / 딥리서치 기능 개발</div>
+          <div class="stack">Python · FastAPI · LangChain · LangGraph · MCP · Linux · AWS · Git</div>
+          <ul>
+            <li>파일 업로드 → 문서 요약 → 보고서 초안 생성으로 이어지는 <b>딥리서치 기능</b>을 LangChain·LangGraph 기반 멀티스텝 플로우로 구현</li>
+            <li>검색·요약 단계를 거쳐 초안을 만드는 처리 흐름을 설계해 반복적 보고서 작성 과정을 자동화</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ---- 포비즈코리아 ---- -->
+      <div class="company">
+        <div>
+          <h2>포비즈코리아</h2>
+          <div class="meta">기업형 E-Commerce 솔루션 전문 기업 · Server Developer</div>
+        </div>
+        <div class="when">2020.12 — 2023.06</div>
+      </div>
+
+      <div class="item">
+        <div class="when">2023.02 — 2023.05</div>
+        <div>
+          <h3>스마일게이트샵 글로벌 서비스 구축</h3>
+          <div class="org">다국가 결제·정책 대응 구조 설계 · Project Leader</div>
+          <div class="stack">PHP · CodeIgniter · MySQL · JavaScript · jQuery · Linux · Git</div>
+          <ul>
+            <li>글로벌 웹서비스 아키텍처 설계, 국가별 정책(통화·결제·배송)을 <b>단일 구조로 관리</b>하는 모델 정의</li>
+            <li>국내/해외 결제 API 연동(이니시스/엑심베이), 신용카드·해외 결제 모듈 통합</li>
+            <li>일반 결제 + 포인트 2종 복합 결제·환불 프로세스와 주문·교환·반품·환불 클레임 프로세스 개발, <b>부분 환불 정합성 설계</b></li>
+            <li>외부 API 통합 — EMS·임직원 인증·이지웰 복지포인트, 카카오·네이버·페이스북·트위터·스토브 SNS 로그인</li>
+            <li>국가별 검색엔진 연동·다국어 검색 구현, PL로서 일정·리소스 조율 및 산출물 품질 관리</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">2020.12 — 2023.03</div>
+        <div>
+          <h3>ELAND FOLDER MALL 구축 / 운영</h3>
+          <div class="org">일 평균 1,000건+(월 5만 건+) 주문 커머스 플랫폼 Admin·Front 핵심 시스템</div>
+          <div class="stack">PHP · CodeIgniter · MySQL · Elasticsearch · JavaScript · jQuery · Linux · Jenkins · Git</div>
+          <ul>
+            <li>주문 집중 시간대 Best 상품 집계 쿼리 병목으로 상품 목록 로딩이 최대 10초 지연되던 문제를, <b>10분 주기 스케줄러 사전 집계 구조</b>로 전환하고 검색을 Elasticsearch로 독립</li>
+            <li>결과 — 상품 조회 <b>10초→1초(90%↓)</b>, 검색 속도 약 60% 개선, 월 평균 5만 건+ 주문 안정 처리</li>
+            <li>커뮤니티 ‘FolderingChannel’ 설계·개발, UGC 정책 기반 회원 신고·차단 기능 개발</li>
+            <li>Elasticsearch 기반 상품 검색 고도화 및 실시간 ‘최근 본 상품 History’ 관리 기능 개발</li>
+            <li>본인인증·회원정보·후기종합·평점통계 등 외부 연동 시스템 개발</li>
+            <li>Linux Cron 정기 배치 및 정산·운영 업무 자동화, Jenkins 기반 자동·수동 배포 운영</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">2021.01 — 2023.01</div>
+        <div>
+          <h3>그 외 커머스 구축·운영</h3>
+          <div class="org">다수 커머스·사내 프로젝트</div>
+          <ul>
+            <li><b>HL SCIENCE MALL</b> 운영 — 월 2,000건+ 주문 안정 운영, 네이버페이 주문형 API 연동, Cron 자동화, 관리자 검색 고도화</li>
+            <li><b>푸드케어 CLE 이유식 쇼핑몰</b> 구축 — 회원·콘텐츠 <b>30만 건+ 마이그레이션 및 무결성 검증</b>, Elasticsearch 연동, SNS 간편 로그인·주문 통계 개발</li>
+            <li><b>위기브 기부 모금 서비스</b> 구축 — UGC 정책 기반 신고·차단, 지자체 셀러 관리·입점/제휴 문의 관리로 운영 프로세스 표준화</li>
+            <li><b>사내 프로젝트</b> — Elasticsearch 고도화·매뉴얼 작성, 글로벌 해외 판매 공통 솔루션 개선, OPEN API·바이오 생체 인증 API 개발</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- =============== 학력 =============== -->
-    <section>
-      <div class="sec-label">Education</div>
-      <div class="item">
-        <div class="when">— 2026</div>
-        <div>
-          <h3>소프트웨어융합대학원 · AI 전공</h3>
-          <div class="org">국민대학교 · 2026 졸업예정</div>
-        </div>
-      </div>
-    </section>
-
-    <footer>박진혁 · Last updated 2026</footer>
+    <footer>박진혁 · Server Developer · Last updated 2026.06</footer>
 
   </div>
 </body>

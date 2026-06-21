@@ -1,316 +1,400 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>박진혁 · Server Developer</title>
-<meta name="description" content="Java·Spring 기반 6년 차 서버 백엔드 개발자 — 박진혁 경력기술서" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-<style>
-  :root {
-    --ink: #16181d;
-    --muted: #6b7280;
-    --faint: #9aa1ab;
-    --line: #e7e9ed;
-    --bg: #fcfcfd;
-    --accent: #2f4bd8;
-    --accent-soft: #eef1fe;
-    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>박진혁 · Backend Engineer</title>
+  <meta name="description" content="Java·Spring 기반 6년 차 백엔드 엔지니어 — 박진혁 경력기술서" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    :root {
+      --ink: #16181d;
+      --muted: #6b7280;
+      --faint: #9aa1ab;
+      --line: #e7e9ed;
+      --bg: #fcfcfd;
+      --accent: #2f4bd8;
+      --accent-soft: #eef1fe;
+      --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+    }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  body {
-    font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    font-feature-settings: "tnum";
-  }
+    body {
+      font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "tnum";
+    }
 
-  .wrap {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 88px 32px 120px;
-  }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 88px 32px 120px;
+    }
 
-  /* ---- header ---- */
-  header { margin-bottom: 56px; }
+    /* ---- header ---- */
+    header {
+      margin-bottom: 56px;
+    }
 
-  .eyebrow {
-    font-family: var(--mono);
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    color: var(--accent);
-    margin-bottom: 18px;
-    display: inline-block;
-    padding: 4px 10px;
-    background: var(--accent-soft);
-    border-radius: 4px;
-  }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-bottom: 18px;
+      display: inline-block;
+      padding: 4px 10px;
+      background: var(--accent-soft);
+      border-radius: 4px;
+    }
 
-  h1 {
-    font-size: 44px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.05;
-  }
+    .name-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
-  .role {
-    font-size: 17px;
-    color: var(--muted);
-    margin-top: 12px;
-    font-weight: 500;
-  }
+    .name-row .contact {
+      margin-top: 0;
+    }
 
-  .summary {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #3a3e46;
-    max-width: 62ch;
-  }
-  .summary + .summary { margin-top: 12px; }
+    h1 {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
 
-  .contact {
-    margin-top: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 18px;
-    font-family: var(--mono);
-    font-size: 13px;
-  }
-  .contact a, .contact span {
-    color: var(--ink);
-    text-decoration: none;
-  }
-  .contact a {
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 1px;
-    transition: border-color .15s, color .15s;
-  }
-  .contact a:hover { color: var(--accent); border-color: var(--accent); }
+    .role {
+      font-size: 17px;
+      color: var(--muted);
+      margin-top: 12px;
+      font-weight: 500;
+    }
 
-  /* ---- sections ---- */
-  section { margin-bottom: 48px; }
+    .summary {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #3a3e46;
+      max-width: 100%;
+    }
 
-  .sec-label {
-    font-family: var(--mono);
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--faint);
-    padding-bottom: 12px;
-    margin-bottom: 24px;
-    border-bottom: 1px solid var(--line);
-  }
+    .summary+.summary {
+      margin-top: 12px;
+    }
 
-  /* company group */
-  .company {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 22px;
-  }
-  .company:not(:first-of-type) { margin-top: 42px; }
-  .company h2 {
-    font-size: 19px;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-  }
-  .company .meta {
-    font-size: 13px;
-    color: var(--muted);
-    margin-top: 3px;
-  }
-  .company .when {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--faint);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
+    .contact {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-family: var(--mono);
+      font-size: 13px;
+    }
 
-  /* experience row: date rail + body */
-  .item {
-    display: grid;
-    grid-template-columns: 132px 1fr;
-    gap: 24px;
-    margin-bottom: 30px;
-  }
-  .item:last-child { margin-bottom: 0; }
+    .contact a,
+    .contact span {
+      color: var(--ink);
+      text-decoration: none;
+    }
 
-  .item .when {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--faint);
-    padding-top: 3px;
-  }
+    .contact a {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1px;
+      transition: border-color .15s, color .15s;
+    }
 
-  .item h3 {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-  .item .org {
-    font-size: 13px;
-    color: var(--muted);
-    margin-top: 3px;
-    margin-bottom: 12px;
-  }
-  .item .stack {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--faint);
-    margin-top: 2px;
-    margin-bottom: 12px;
-  }
+    .contact a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
 
-  ul { list-style: none; }
-  li {
-    position: relative;
-    padding-left: 18px;
-    margin-bottom: 7px;
-    font-size: 15px;
-    color: #34383f;
-  }
-  li::before {
-    content: "";
-    position: absolute;
-    left: 2px; top: 11px;
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: var(--line);
-  }
-  li b {
-    color: var(--ink);
-    font-weight: 700;
-    background: linear-gradient(transparent 62%, var(--accent-soft) 62%);
-    padding: 0 1px;
-  }
+    /* ---- sections ---- */
+    section {
+      margin-bottom: 48px;
+    }
 
-  /* skills */
-  .skills {
-    display: grid;
-    grid-template-columns: 132px 1fr;
-    gap: 24px 24px;
-    align-items: baseline;
-  }
-  .skills .cat {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: var(--faint);
-  }
-  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
-  .tag {
-    font-size: 13px;
-    padding: 3px 11px;
-    border: 1px solid var(--line);
-    border-radius: 100px;
-    color: #34383f;
-  }
+    .sec-label {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--accent);
+    }
 
-  footer {
-    margin-top: 80px;
-    padding-top: 20px;
-    border-top: 1px solid var(--line);
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--faint);
-  }
+    /* company group */
+    .company {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
 
-  /* responsive */
-  @media (max-width: 560px) {
-    .wrap { padding: 56px 22px 80px; }
-    h1 { font-size: 34px; }
-    .item, .skills { grid-template-columns: 1fr; gap: 6px; }
-    .item .when { padding-top: 0; }
-    .company { flex-direction: column; gap: 4px; }
-  }
+    .company:not(:first-of-type) {
+      margin-top: 42px;
+    }
 
-  /* print / PDF */
-  @media print {
-    body { background: #fff; }
-    .wrap { padding: 24px 0; max-width: 100%; }
-    .contact a { border: none; }
-    li b { background: none; }
-    a { color: var(--ink) !important; }
-  }
-</style>
+    .company h2 {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .company .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .company .when {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--faint);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* experience row: date rail + body */
+    .item {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item .when {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--faint);
+      padding-top: 3px;
+    }
+
+    .item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .item .org {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 3px;
+      margin-bottom: 12px;
+    }
+
+    .item .stack {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--faint);
+      margin-top: 2px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 7px;
+      font-size: 15px;
+      color: #34383f;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 11px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--line);
+    }
+
+    li b {
+      color: var(--ink);
+      font-weight: 700;
+      background: linear-gradient(transparent 62%, var(--accent-soft) 62%);
+      padding: 0 1px;
+    }
+
+    li.result {
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    li.result::before {
+      background: var(--accent);
+      width: 6px;
+      height: 6px;
+      top: 9px;
+    }
+
+    li.result strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    /* matrix grid (skills / competencies) */
+    .matrix {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 22px 24px;
+      align-items: baseline;
+    }
+
+    .matrix .cat {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--faint);
+    }
+
+    .matrix.comp .cat,
+    .matrix.skills .cat {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .matrix .desc {
+      font-size: 15px;
+      color: #34383f;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      font-size: 13px;
+      padding: 3px 11px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      color: #34383f;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--faint);
+    }
+
+    /* responsive */
+    @media (max-width: 560px) {
+      .wrap {
+        padding: 56px 22px 80px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .item,
+      .matrix {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .item .when {
+        padding-top: 0;
+      }
+
+      .company {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .matrix {
+        gap: 4px 0;
+      }
+
+      .matrix .cat {
+        margin-top: 14px;
+      }
+    }
+
+    /* print / PDF */
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .wrap {
+        padding: 24px 0;
+        max-width: 100%;
+      }
+
+      .contact a {
+        border: none;
+      }
+
+      li b {
+        background: none;
+      }
+
+      a {
+        color: var(--ink) !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <div class="wrap">
 
     <!-- =============== 헤더 =============== -->
     <header>
-      <span class="eyebrow">Java · Spring Server Developer</span>
-      <h1>박진혁</h1>
-      <p class="role">6년 차 서버 백엔드 개발자 · 유진아이티서비스</p>
+      <div class="name-row">
+        <h1>박진혁</h1>
+        <div class="contact">
+          <a href="mailto:wlsgurlek@gmail.com">wlsgurlek@gmail.com</a>
+        </div>
+      </div>
+      <p class="role">백엔드 엔지니어</p>
       <p class="summary">
-        Java·Spring, Oracle/MySQL 기반 6년 차 서버 백엔드 개발자입니다.
+        Java·Spring, Oracle/MySQL 기반의 6년 차 백엔드 엔지니어입니다.
         일 1,000건+·월 5만 건+ 주문을 처리하는 커머스 플랫폼, 다국가 통화·결제를 다룬
-        글로벌 커머스, 약 500명 규모 그룹사 인사 시스템에서 백엔드 개발과 운영을 맡아왔습니다.
+        글로벌 커머스, 약 500명 규모 그룹사 인사 시스템에서 백엔드 개발과 운영을 해왔습니다.
       </p>
       <p class="summary">
-        주문·결제·환불·정산 트랜잭션의 정합성과 대용량 조회 성능을 끝까지 파고드는 영역으로 보고,
-        화면 응답을 <b>18초→1초</b>, 상품 조회를 <b>10초→1초</b>로 줄이고
-        30만 건 규모 데이터 마이그레이션의 무결성을 검증했습니다.
-        현재는 사내 시스템과 AI를 잇는 연동 표준 설계와 인사 시스템 운영을 전담하고 있습니다.
+        익숙한 방식을 그대로 두지 않고 문제에 맞는 더 나은 구조를 찾는 편입니다.
+        실시간 집계 쿼리는 스케줄러 기반 사전 집계로, DB 검색의 한계는 Elasticsearch로,
+        반복되는 운영 업무는 자동화·배포 파이프라인으로 옮겨왔습니다.
+        성능 병목과 데이터 정합성은 끝까지 파고들어 화면 응답을 <b>18초→1초</b>,
+        상품 조회를 <b>10초→1초</b>로 줄이고 30만 건 규모 데이터 마이그레이션의 무결성을 검증했습니다.
       </p>
-      <div class="contact">
-        <a href="mailto:wlsgurlek@gmail.com">wlsgurlek@gmail.com</a>
-        <span>010-6717-7033</span>
-        <a href="https://jh-p.tistory.com">jh-p.tistory.com</a>
-      </div>
+      <p class="summary">
+        현재는 사내 시스템과 AI를 잇는 연동 표준 설계를 맡고, 인사 시스템 운영도 전담하고 있습니다.
+      </p>
     </header>
-
-    <!-- =============== 보유 기술 =============== -->
-    <section>
-      <div class="sec-label">Skills</div>
-      <div class="skills">
-        <div class="cat">Backend</div>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">Spring</span>
-          <span class="tag">JSP</span>
-          <span class="tag">Python</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">PHP</span>
-          <span class="tag">CodeIgniter</span>
-        </div>
-        <div class="cat">Database</div>
-        <div class="tags">
-          <span class="tag">Oracle</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">Elasticsearch</span>
-        </div>
-        <div class="cat">AI · ML</div>
-        <div class="tags">
-          <span class="tag">LangChain</span>
-          <span class="tag">LangGraph</span>
-          <span class="tag">MCP</span>
-          <span class="tag">PyTorch</span>
-          <span class="tag">pandas</span>
-          <span class="tag">FAISS</span>
-        </div>
-        <div class="cat">DevOps · Infra</div>
-        <div class="tags">
-          <span class="tag">AWS</span>
-          <span class="tag">JEUS</span>
-          <span class="tag">Jenkins</span>
-          <span class="tag">Git</span>
-          <span class="tag">SVN</span>
-          <span class="tag">Linux</span>
-        </div>
-        <div class="cat">Collaboration</div>
-        <div class="tags">
-          <span class="tag">JIRA</span>
-          <span class="tag">Confluence</span>
-          <span class="tag">BitBucket</span>
-        </div>
-      </div>
-    </section>
 
     <!-- =============== 상세 경력 =============== -->
     <section>
@@ -320,7 +404,7 @@
       <div class="company">
         <div>
           <h2>유진아이티서비스</h2>
-          <div class="meta">그룹 IT 인프라·서비스 전문 기업 · Server Developer</div>
+          <div class="meta">그룹 IT 인프라·서비스 전문 기업 · Backend Engineer</div>
         </div>
         <div class="when">2023.06 — 재직 중</div>
       </div>
@@ -330,15 +414,20 @@
         <div>
           <h3>e-HR 인사시스템 성능 고도화 및 운영 안정성 개선</h3>
           <div class="org">그룹 계열사 인사 시스템(약 500명 규모) 단독 운영·유지보수 / SSO 통합 로그인 PL</div>
-          <div class="stack">Java · Spring · JSP · Oracle · JavaScript · jQuery · Linux · Jenkins · JEUS · SVN · Git</div>
+          <div class="stack">Java · Spring · JSP · Oracle · JavaScript · jQuery · Linux · Jenkins · JEUS · SVN · Git
+          </div>
           <ul>
-            <li>핵심 화면 응답 지연 <b>18초→1초(94%↓)</b> — 인덱스 보완·동적 SQL의 정적 SQL 전환으로 Oracle 하드파싱 비용 절감, 반복 조회·마스킹은 서버 캐시로, 접속 로그는 비동기로 분리</li>
-            <li>일괄 결재 로직을 <b>비동기 병렬 처리</b>로 전환, 사용자 체감 응답 1초 이내로 단축</li>
-            <li>SSO 통합 로그인 기능을 <b>프로젝트 리더</b>로 맡아 분석·설계·개발·검증 전 구간 주도</li>
-            <li>신규 입사자 등록을 엑셀 업로드·유효성 검증·DB 자동 반영 구조로 전환 <b>(20분→1분, 95%↓)</b></li>
-            <li>개인정보 마스킹을 공통 AOP·인터셉터로 일원화, 접근 로그·감사 추적으로 개인정보 법령 요건 충족</li>
-            <li>FTP 수동 배포를 <b>Jenkins·Git 자동 배포 파이프라인</b>으로 전환, 누락·오배포 리스크 제거</li>
-            <li>Oracle DB 성능 최적화·쿼리 튜닝 상시 수행, 조직도·인력 현황 시각화 및 리포팅 기능 개발</li>
+            <li>핵심 화면 응답 지연 원인을 개발자 도구로 짚은 뒤, 인덱스 보완·동적 SQL의 정적 SQL 전환으로 Oracle 하드파싱 비용을 줄이고 반복 조회 SQL·마스킹은 서버 캐시로, 접속
+              로그는 비동기로 분리</li>
+            <li>일괄 결재 로직을 <b>비동기 병렬 처리</b>로 전환해 사용자 체감 응답 단축</li>
+            <li>SSO 통합 로그인 기능 개발을 <b>프로젝트 리더</b>로 맡아 분석·설계·개발·검증 전 구간 주도</li>
+            <li>신규 입사자 등록을 수기 입력에서 엑셀 업로드·유효성 검증·DB 자동 반영 구조로 전환</li>
+            <li>개인정보 마스킹을 공통 AOP·인터셉터로 일원화, 메뉴별 관리자 설정·권한 등급별 해제 범위 구분에 접근 로그·감사 추적을 더해 개인정보 법령 요건 충족</li>
+            <li>FTP 수동 배포를 <b>Jenkins·Git 자동 배포 파이프라인</b>으로 전환, 수동 누락·오배포 리스크 제거</li>
+            <li>Oracle DB 성능 최적화·쿼리 튜닝 상시 수행, 조직도·인력 현황 시각화 및 데이터 분석·리포팅 기능 개발</li>
+            <li class="result"><strong>성과</strong> — 핵심 화면 응답 <strong>18초→1초(94%↓)</strong>, 일괄 결재 체감 1초 이내, 신규 입사자 등록
+              <strong>20분→1분(95%↓)</strong>
+            </li>
           </ul>
         </div>
       </div>
@@ -350,12 +439,16 @@
           <div class="org">SaaS 기반 AI 서비스 ‘웍스AI’ 연동·그룹사 확산 전 과정 · Project Leader</div>
           <div class="stack">Python · LangGraph · MCP · Linux · AWS · Git</div>
           <ul>
-            <li>외부 SaaS–사내 시스템 데이터 연동 인터페이스 설계·구현, <b>OAuth 2.0/JWT 기반 표준 인증·인가 체계</b>(토큰 만료·갱신, scope 정의)를 사내 환경에 정착</li>
-            <li>외부 차단 내부망을 <b>API Gateway → Lambda → NAT Gateway → 사내 DMZ</b> 경로로 설계하고, MCP 서버를 두어 보안 경계를 지키며 AI가 e-HR 데이터를 안전하게 활용하도록 연동</li>
-            <li>투자심의위원회를 대체하는 <b>AI Agent</b> 구현 — LangGraph 상태 그래프로 다수 에이전트에 역할 주입·단계별 심의 절차 통제, MCP 서버를 데이터 근거 판단 수단으로 활용</li>
+            <li>외부 SaaS–사내 시스템 데이터 연동 인터페이스 설계·구현, <b>OAuth 2.0/JWT 기반 표준 인증·인가 체계</b>(토큰 만료·갱신, 권한 범위(scope) 정의)를 사내
+              환경에 정착</li>
+            <li>외부 접근이 차단된 내부망을 <b>API Gateway → Lambda → NAT Gateway → 사내 DMZ</b> 경로로 설계하고, 그 위에 MCP 서버를 두어 보안 경계를 지키며
+              AI가 e-HR 데이터를 안전하게 활용하도록 연동</li>
+            <li>투자심의위원회를 대체하는 <b>AI Agent</b> 구현 — LangGraph 상태 그래프로 다수 에이전트에 역할을 주입하고 단계별 심의 절차를 통제, MCP 서버를 각 에이전트가 사내
+              데이터를 근거로 판단하는 수단으로 활용</li>
             <li>사내 데이터 조회용 REST API 신규 개발·운영, 월별 사용자·호출량 집계 및 정기 보고 체계 구축</li>
-            <li>그룹 계열사 대상 오프라인 교육 5회 진행·팀장급 도입 효과 발표·확산 PoC 기술 리딩</li>
-            <li>결과 — 그룹 내 <b>활성 사용자 900명·15개 계열사</b>로 확산, AI–사내 시스템 연동 표준 인증·인가 흐름 정착</li>
+            <li>그룹 계열사 대상 오프라인 교육 5회 진행·팀장급 도입 효과 발표·그룹사 확산 PoC 기술 리딩</li>
+            <li class="result"><strong>성과</strong> — 그룹 내 <strong>활성 사용자 900명·15개 계열사</strong>로 확산, AI–사내 시스템 연동 표준
+              인증·인가 흐름 정착</li>
           </ul>
         </div>
       </div>
@@ -368,7 +461,8 @@
           <div class="stack">Python · FastAPI · LangChain · LangGraph · MCP · Linux · AWS · Git</div>
           <ul>
             <li>파일 업로드 → 문서 요약 → 보고서 초안 생성으로 이어지는 <b>딥리서치 기능</b>을 LangChain·LangGraph 기반 멀티스텝 플로우로 구현</li>
-            <li>검색·요약 단계를 거쳐 초안을 만드는 처리 흐름을 설계해 반복적 보고서 작성 과정을 자동화</li>
+            <li>검색·요약 단계를 거쳐 초안을 만드는 처리 흐름 설계</li>
+            <li class="result"><strong>성과</strong> — 반복적인 보고서 작성 과정을 자동화</li>
           </ul>
         </div>
       </div>
@@ -377,7 +471,7 @@
       <div class="company">
         <div>
           <h2>포비즈코리아</h2>
-          <div class="meta">기업형 E-Commerce 솔루션 전문 기업 · Server Developer</div>
+          <div class="meta">기업형 E-Commerce 솔루션 전문 기업 · Backend Engineer</div>
         </div>
         <div class="when">2020.12 — 2023.06</div>
       </div>
@@ -391,9 +485,10 @@
           <ul>
             <li>글로벌 웹서비스 아키텍처 설계, 국가별 정책(통화·결제·배송)을 <b>단일 구조로 관리</b>하는 모델 정의</li>
             <li>국내/해외 결제 API 연동(이니시스/엑심베이), 신용카드·해외 결제 모듈 통합</li>
-            <li>일반 결제 + 포인트 2종 복합 결제·환불 프로세스와 주문·교환·반품·환불 클레임 프로세스 개발, <b>부분 환불 정합성 설계</b></li>
-            <li>외부 API 통합 — EMS·임직원 인증·이지웰 복지포인트, 카카오·네이버·페이스북·트위터·스토브 SNS 로그인</li>
-            <li>국가별 검색엔진 연동·다국어 검색 구현, PL로서 일정·리소스 조율 및 산출물 품질 관리</li>
+            <li>일반 결제 + 포인트 2종을 묶은 복합 결제·환불 프로세스와 주문·교환·반품·환불 클레임 프로세스 개발, <b>부분 환불 정합성 설계</b></li>
+            <li>외부 API 통합 연동 — EMS·임직원 인증·이지웰 복지포인트, 카카오·네이버·페이스북·트위터·스토브 SNS 로그인</li>
+            <li>국가별 검색엔진 연동·다국어 검색 구현, PL로서 일정·리소스 조율 및 팀 산출물 품질 관리</li>
+            <li class="result"><strong>성과</strong> — 글로벌 결제·정책 대응 구조 설계로 다국가 서비스 런칭, 국가별 결제·검색 확장성 확보</li>
           </ul>
         </div>
       </div>
@@ -403,14 +498,18 @@
         <div>
           <h3>ELAND FOLDER MALL 구축 / 운영</h3>
           <div class="org">일 평균 1,000건+(월 5만 건+) 주문 커머스 플랫폼 Admin·Front 핵심 시스템</div>
-          <div class="stack">PHP · CodeIgniter · MySQL · Elasticsearch · JavaScript · jQuery · Linux · Jenkins · Git</div>
+          <div class="stack">PHP · CodeIgniter · MySQL · Elasticsearch · JavaScript · jQuery · Linux · Jenkins · Git
+          </div>
           <ul>
-            <li>주문 집중 시간대 Best 상품 집계 쿼리 병목으로 상품 목록 로딩이 최대 10초 지연되던 문제를, <b>10분 주기 스케줄러 사전 집계 구조</b>로 전환하고 검색을 Elasticsearch로 독립</li>
-            <li>결과 — 상품 조회 <b>10초→1초(90%↓)</b>, 검색 속도 약 60% 개선, 월 평균 5만 건+ 주문 안정 처리</li>
-            <li>커뮤니티 ‘FolderingChannel’ 설계·개발, UGC 정책 기반 회원 신고·차단 기능 개발</li>
+            <li>주문 집중 시간대에 병목을 유발하던 실시간 Best 상품 집계 쿼리를, <b>10분 주기 스케줄러 사전 집계 구조</b>로 전환(Linux Cron)하고 집계 결과만 즉시 조회하도록
+              쿼리·데이터 흐름 재설계</li>
+            <li>기존 DB 기반 검색의 한계를 풀기 위해 대용량 검색을 <b>Elasticsearch 기반</b>으로 검색 엔진 아키텍처 독립</li>
+            <li>커뮤니티 기능 ‘FolderingChannel’ 설계·개발, UGC 정책 기반 회원 신고·차단 기능 개발</li>
             <li>Elasticsearch 기반 상품 검색 고도화 및 실시간 ‘최근 본 상품 History’ 관리 기능 개발</li>
             <li>본인인증·회원정보·후기종합·평점통계 등 외부 연동 시스템 개발</li>
-            <li>Linux Cron 정기 배치 및 정산·운영 업무 자동화, Jenkins 기반 자동·수동 배포 운영</li>
+            <li>Linux Cron 기반 정기 배치 및 수기 정산·운영 업무 자동화, Jenkins 기반 자동·수동 배포 운영</li>
+            <li class="result"><strong>성과</strong> — 상품 조회 <strong>10초→1초(90%↓)</strong>, 검색 속도 약 60% 개선, 월 평균 5만 건+ 주문
+              안정 처리</li>
           </ul>
         </div>
       </div>
@@ -421,17 +520,165 @@
           <h3>그 외 커머스 구축·운영</h3>
           <div class="org">다수 커머스·사내 프로젝트</div>
           <ul>
-            <li><b>HL SCIENCE MALL</b> 운영 — 월 2,000건+ 주문 안정 운영, 네이버페이 주문형 API 연동, Cron 자동화, 관리자 검색 고도화</li>
-            <li><b>푸드케어 CLE 이유식 쇼핑몰</b> 구축 — 회원·콘텐츠 <b>30만 건+ 마이그레이션 및 무결성 검증</b>, Elasticsearch 연동, SNS 간편 로그인·주문 통계 개발</li>
-            <li><b>위기브 기부 모금 서비스</b> 구축 — UGC 정책 기반 신고·차단, 지자체 셀러 관리·입점/제휴 문의 관리로 운영 프로세스 표준화</li>
-            <li><b>사내 프로젝트</b> — Elasticsearch 고도화·매뉴얼 작성, 글로벌 해외 판매 공통 솔루션 개선, OPEN API·바이오 생체 인증 API 개발</li>
+            <li><b>HL SCIENCE MALL</b> 운영 (2021.03~2022.12) — 월 2,000건+ 주문 안정 운영, 네이버페이 주문형 API 연동, Cron 자동화, 관리자 검색 고도화
+            </li>
+            <li><b>푸드케어 CLE 이유식 쇼핑몰</b> 구축 (2022.07~2022.10) — 회원·콘텐츠 <b>30만 건+ 마이그레이션 및 무결성 검증</b>, Elasticsearch 연동,
+              SNS 간편 로그인·주문 통계 기능 개발</li>
+            <li><b>위기브 기부 모금 서비스</b> 구축 (2022.10~2023.01) — UGC 정책 기반 신고·차단, 지자체 셀러 관리·셀러별 홈페이지·입점/제휴 문의 관리 개발로 운영 프로세스
+              표준화</li>
+            <li><b>그 외 사내 프로젝트</b> (2021.01~2022.07) — Elasticsearch 고도화·학습 매뉴얼 작성, 글로벌 해외 판매 공통 솔루션 개선, OPEN API·바이오 생체
+              인증 API 개발</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <footer>박진혁 · Server Developer · Last updated 2026.06</footer>
+    <!-- =============== 핵심 역량 =============== -->
+    <section>
+      <div class="sec-label">Competencies</div>
+      <div class="matrix comp">
+        <div class="cat">트랜잭션 · 정합성</div>
+        <div class="desc">주문·결제·환불·정산 트랜잭션 설계, 복합 결제·부분 환불, 30만 건 데이터 마이그레이션 무결성 검증</div>
+
+        <div class="cat">성능 · 운영 안정성</div>
+        <div class="desc">SQL 튜닝·인덱스 설계·동적→정적 쿼리 전환으로 응답 18초→1초, 스케줄러 사전 집계 + Elasticsearch로 상품 조회 10초→1초, 캐싱·비동기 처리, 장애
+          원인 분석·재발 방지</div>
+
+        <div class="cat">RDB 설계 · 운영</div>
+        <div class="desc">Oracle/MySQL 기반 대용량 조회 병목 분석 및 성능 개선</div>
+
+        <div class="cat">인증 · 시스템 연동</div>
+        <div class="desc">OAuth 2.0/JWT 표준 인증·인가, 내부망 보안 경계를 유지하는 연동 설계(API Gateway→Lambda→DMZ, MCP), 결제·SNS·복지 등 외부 API
+          통합</div>
+
+        <div class="cat">DevOps · 자동화</div>
+        <div class="desc">수기 업무 자동화, Jenkins·Git 자동 배포 파이프라인, AWS (EC2 · ECS · RDS · S3 · CloudWatch)</div>
+
+        <div class="cat">협업 · 리딩</div>
+        <div class="desc">HR 부서·외부 SaaS 벤더 요구사항 협의, PL·기술 리딩, 그룹 계열사 교육 5회·팀장급 발표</div>
+      </div>
+    </section>
+
+    <!-- =============== 보유 기술 =============== -->
+    <section>
+      <div class="sec-label">Skills</div>
+      <div class="matrix skills">
+        <div class="cat">Backend</div>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Spring</span>
+          <span class="tag">JSP</span>
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">PHP</span>
+          <span class="tag">CodeIgniter</span>
+          <span class="tag">Gradle</span>
+          <span class="tag">Maven</span>
+        </div>
+        <div class="cat">DevOps</div>
+        <div class="tags">
+          <span class="tag">Oracle</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Elasticsearch</span>
+          <span class="tag">AWS (EC2·ECS·RDS·S3·CloudWatch)</span>
+          <span class="tag">Nginx</span>
+          <span class="tag">Tomcat</span>
+          <span class="tag">JEUS</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">Linux (CentOS)</span>
+          <span class="tag">Git</span>
+          <span class="tag">SVN</span>
+        </div>
+        <div class="cat">AI · ML</div>
+        <div class="tags">
+          <span class="tag">LangChain</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">MCP</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">pandas</span>
+          <span class="tag">FAISS</span>
+        </div>
+        <div class="cat">Tools · Collab</div>
+        <div class="tags">
+          <span class="tag">JetBrains (IntelliJ·DataGrip·PyCharm)</span>
+          <span class="tag">Cursor</span>
+          <span class="tag">Antigravity</span>
+          <span class="tag">JIRA</span>
+          <span class="tag">Confluence</span>
+          <span class="tag">BitBucket</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== 학력 =============== -->
+    <section>
+      <div class="sec-label">Education</div>
+
+      <div class="item">
+        <div class="when">2025.03 — 2026.08</div>
+        <div>
+          <h3>국민대학교 소프트웨어융합대학원</h3>
+          <div class="org">인공지능전공 · 졸업 예정 · 학점 4.18 / 4.5</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">2021.03 — 2023.08</div>
+        <div>
+          <h3>한국방송통신대학교</h3>
+          <div class="org">컴퓨터과학과 · 졸업 · 학점 3.1 / 4.5</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">2017.03 — 2021.02</div>
+        <div>
+          <h3>여주대학교</h3>
+          <div class="org">컴퓨터정보과 · 졸업 · 학점 4.35 / 4.5</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">2020.09 — 2020.11</div>
+        <div>
+          <h3>SoftSquared 10기 Server Session</h3>
+          <div class="org">서버 개발 교육 과정 수료</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== 활동 =============== -->
+    <section>
+      <div class="sec-label">Activities</div>
+
+      <div class="item">
+        <div class="when">2026</div>
+        <div>
+          <h3>기업 데이터 접근성 향상을 위한 자기교정 Text-to-SQL 프레임워크</h3>
+          <div class="org">한국IT서비스학회 · 제1저자</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">2026 — 진행 중</div>
+        <div>
+          <h3>AI CHAMPION 대회 100팀 선발 진출</h3>
+          <div class="org">카카오톡 대화를 AI 웹툰으로 자동 변환하는 서비스 ‘톡툰’</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="when">2021.01 — 2021.05</div>
+        <div>
+          <h3>SoftSquared Server Session 멘토</h3>
+          <div class="org">1:1 서버 개발 멘토링</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>박진혁 · Backend Engineer · Last updated 2026.06</footer>
 
   </div>
 </body>
+
 </html>
